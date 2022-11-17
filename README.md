@@ -16,9 +16,9 @@ The CSV file that’s provided for this Homework contains the price change data 
 
 ## Files
 
-Download the following files to help you get started:
+[Crypto Clustering Starter Code](crypto_investments.ipynb)
 
-[Module 10 Challenge files](Starter_Code)
+[`crypto_market_data` CSV file](Resources/crypto_market_data.csv)
 
 ## Instructions
 
@@ -108,117 +108,3 @@ In this section, you will visually analyze the cluster analysis results by obser
 3. Answer the following question: After visually analyzing the cluster analysis results, what is the impact of using fewer features to cluster the data by using K-means?
 
 > **Hint** Recall that you learned how to create composite plots in Module 6. Review that module if you need a refresher on making these plots. You can also check [the hvPlot documentation](https://holoviz.org/tutorial/Composing_Plots.html).
-
-### Requirements
-
-#### Find the Best Value for k Using the Original Data (15 points)
-
-##### To receive all points, you must
-
-* Code the elbow method algorithm to find the best value for k. Use a range from 1 to 11. (5 points)
-
-* Plot a line chart with all the inertia values computed with the different values of k to visually identify the optimal value for k. (5 points)
-
-* Answer the following question: What is the best value for k? (5 points)
-
-#### Cluster Cryptocurrencies with K-means Using the Original Data (10 points)
-
-##### To receive all points, you must
-
-* Initialize the K-means model with four clusters by using the best value for k. (1 point)
-
-* Fit the K-means model by using the original data. (1 point)
-
-* Predict the clusters to group the cryptocurrencies using the original data. View the resulting array of cluster values. (3 points)
-
-* Create a copy of the original data and add a new column with the predicted clusters. (1 point)
-
-* Using hvPlot, create a scatter plot by setting `x="price_change_percentage_24h"` and `y="price_change_percentage_7d"`. Color the graph points with the labels found by using K-means. Then, add the crypto name in the `hover_cols` parameter to identify the cryptocurrency represented by each data point. (4 points)
-
-#### Optimize Clusters with Principal Component Analysis (10 points)
-
-##### To receive all points, you must
-
-* Create a PCA model instance and set `n_components=3`. (1 point)
-
-* Use the PCA model to reduce to three principal components. View the first five rows of the DataFrame. (2 points)
-
-* Retrieve the explained variance to determine how much information can be attributed to each principal component. (2 points)
-
-* Answer the following question: What is the total explained variance of the three principal components? (3 points)
-
-* Create a new DataFrame with the PCA data. Be sure to set the `coin_id` index from the original DataFrame as the index for the new DataFrame. Review the resulting DataFrame. (2 points)
-
-#### Find the Best Value for k Using the PCA Data (10 points)
-
-##### To receive all points, you must
-
-* Code the elbow method algorithm and use the PCA data to find the best value for k. Use a range from 1 to 11. (2 points)
-
-* Plot a line chart with all the inertia values computed with the different values of k to visually identify the optimal value for k. (5 points)
-
-* Answer the following questions: What is the best value for k when using the PCA data? Does it differ from the best k value found by using the original data? (3 points)
-
-#### Cluster Cryptocurrencies with K-means Using the PCA Data (10 points)
-
-##### To receive all points, you must
-
-* Initialize the K-means model with four clusters by using the best value for k. (1 point)
-
-* Fit the K-means model using the PCA data. (1 point)
-
-* Predict the clusters to group the cryptocurrencies using the PCA data. View the resulting array of cluster values. (3 points)
-
-* Create a copy of the DataFrame with the PCA data and add a new column to store the predicted clusters. (1 point)
-
-* Using hvPlot, create a scatter plot by setting `x="PC1"` and `y="PC2"`. Color the graph points with the labels found by using K-means. Then, add the crypto name in the `over_cols` parameter to identify the cryptocurrency represented by each data point. (4 points)
-
-#### Visualize and Compare the Results (15 points)
-
-##### To receive all points, you must
-
-* Create a composite plot using hvPlot and the plus (`+`) operator to compare the elbow curve that you created to find the best value for k with the original data and the PCA data. (5 points)
-
-* Create a composite plot using hvPlot and the plus (`+`) operator to compare the cryptocurrencies clusters using the original data and the PCA data. (5 points)
-
-* Answer the following question: After visually analyzing the cluster analysis results, what is the impact of using fewer features to cluster the data using K-means? (5 points)
-
-#### Coding Conventions and Formatting (10 points)
-
-##### To receive all points, you must
-
-* Place imports at the top of the file, just after any module comments and docstrings, and before module globals and constants. (3 points)
-
-* Name functions and variables with lowercase characters, with words separated by underscores. (2 points)
-
-* Follow DRY (Don't Repeat Yourself) principles, creating maintainable and reusable code. (3 points)
-
-* Use concise logic and creative engineering where possible. (2 points)
-
-#### Deployment and Submission (10 points)
-
-##### To receive all points, you must
-
-* Submit a link to a GitHub repository that’s cloned to your local machine and contains your files. (4 points)
-
-* Use the command line to add your files the repository. (3 points)
-
-* Include appropriate commit messages in your files. (3 points)
-
-#### Code Comments (10 points)
-
-##### To receive all points, your code must
-
-* Be well commented with concise, relevant notes that other developers can understand. (10 points)
-
-### Submission
-
-To submit your Challenge assignment, click Submit, and then provide the URL of your GitHub repository for grading.
-
-> **Note** You are allowed to miss up to two Challenge assignments and still earn your certificate. If you complete all Challenge assignments, your lowest two grades will be dropped. If you wish to skip this assignment, click Submit, and then indicate you are skipping by typing “I choose to skip this assignment” in the text box.
-
-Comments are disabled for graded submissions in BootCamp Spot. If you have questions about your feedback, please notify your instructional staff or your Student Success Manager. If you would like to resubmit your work for an improved grade, you can use the Resubmit Assignment button to upload new links. You may resubmit up to three times for a total of four submissions.
-
----
-
-Copyright 2022 2U. All Rights Reserved.
